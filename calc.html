@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Расчет заказа — ОПК Авангард</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">ОПК "АВАНГАРД"</div>
+        <nav>
+            <a href="index.html">Главная</a>
+            <a href="catalog.html">Продукция</a>
+            <a href="calc.html" class="active">Калькулятор заказа</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Предварительный расчет стоимости госзаказа</h1>
+        <p>Введите необходимое количество техники для автоматического расчета.</p>
+        
+        <form class="calc-form">
+            <p>Количество танков "Т-100":</p>
+            <input type="number" id="tanks" value="0" min="0">
+            
+            <p>Количество ракетных комплексов "Шторм":</p>
+            <input type="number" id="missiles" value="0" min="0">
+
+            <p>Количество разведывательных БПЛА "Ястреб:"</p>
+            <input type="number" id="bpla" value="0" min="0">
+            
+            <br><br>
+            <button type="button" id="myBtn" onclick="myCount()">Рассчитать стоимость</button>
+        </form>
+
+        <div id="answer" class="hidden">
+            <h3>Результат расчета:</h3>
+            <p>Общая стоимость контракта: <strong><span id="resPrice">0</span> млн руб.</strong></p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
